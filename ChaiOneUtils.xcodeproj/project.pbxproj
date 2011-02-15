@@ -13,6 +13,10 @@
 		293A19711309643000E97454 /* UIApplication+Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A196D1309643000E97454 /* UIApplication+Logging.h */; };
 		293A19721309643000E97454 /* UIApplication+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A196E1309643000E97454 /* UIApplication+Logging.m */; };
 		293A197E130966C700E97454 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A197D130966C700E97454 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		293A1B97130AE96300E97454 /* CHPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1B95130AE96300E97454 /* CHPDFDocument.h */; };
+		293A1B98130AE96300E97454 /* CHPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1B96130AE96300E97454 /* CHPDFDocument.m */; };
+		293A1BA0130AF6A500E97454 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1B9F130AF6A500E97454 /* CoreGraphics.framework */; };
+		293A1BC3130AF6B400E97454 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1BC2130AF6B400E97454 /* QuartzCore.framework */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -24,6 +28,10 @@
 		293A196D1309643000E97454 /* UIApplication+Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Logging.h"; sourceTree = "<group>"; };
 		293A196E1309643000E97454 /* UIApplication+Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Logging.m"; sourceTree = "<group>"; };
 		293A197D130966C700E97454 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		293A1B95130AE96300E97454 /* CHPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPDFDocument.h; sourceTree = "<group>"; };
+		293A1B96130AE96300E97454 /* CHPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPDFDocument.m; sourceTree = "<group>"; };
+		293A1B9F130AF6A500E97454 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		293A1BC2130AF6B400E97454 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUtils_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libChaiOneUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +44,8 @@
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 				293A197E130966C700E97454 /* UIKit.framework in Frameworks */,
+				293A1BA0130AF6A500E97454 /* CoreGraphics.framework in Frameworks */,
+				293A1BC3130AF6B400E97454 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +63,7 @@
 		0867D691FE84028FC02AAC07 /* ChaiOneUtils */ = {
 			isa = PBXGroup;
 			children = (
+				293A1B92130AE92900E97454 /* PDF */,
 				293A196A1309643000E97454 /* Categories */,
 				293A19611309622200E97454 /* Logging */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -68,6 +79,8 @@
 			children = (
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				293A197D130966C700E97454 /* UIKit.framework */,
+				293A1B9F130AF6A500E97454 /* CoreGraphics.framework */,
+				293A1BC2130AF6B400E97454 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +119,15 @@
 			name = UIApplication;
 			sourceTree = "<group>";
 		};
+		293A1B92130AE92900E97454 /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				293A1B95130AE96300E97454 /* CHPDFDocument.h */,
+				293A1B96130AE96300E97454 /* CHPDFDocument.m */,
+			);
+			path = PDF;
+			sourceTree = "<group>";
+		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +147,7 @@
 				293A19631309622200E97454 /* CHLogging.h in Headers */,
 				293A196F1309643000E97454 /* UIApplication+Alerts.h in Headers */,
 				293A19711309643000E97454 /* UIApplication+Logging.h in Headers */,
+				293A1B97130AE96300E97454 /* CHPDFDocument.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +203,7 @@
 			files = (
 				293A19701309643000E97454 /* UIApplication+Alerts.m in Sources */,
 				293A19721309643000E97454 /* UIApplication+Logging.m in Sources */,
+				293A1B98130AE96300E97454 /* CHPDFDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
