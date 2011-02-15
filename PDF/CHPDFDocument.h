@@ -15,12 +15,12 @@
 @class UIImage;
 
 /*!
- @class
- @discussion
- @updated
+ @class CHPDFDocument
+ @discussion A Cocoa wrapper for the PDF utilities provided by the QuartzCore
+ framework.
+ @updated 15-Feb-2011
  */
 @interface CHPDFDocument : NSObject {
-
 @private
 	NSURL*					_pdfURL;
 	CGPDFDocumentRef		_pdfDocumentRef;
@@ -28,85 +28,103 @@
 	NSUInteger				_pageCount;
 }
 
-@property (nonatomic, assign) NSUInteger pageCount;
-@property (nonatomic, assign) CGPDFDocumentRef CGPDFDocument;
 
 /*!
- @method
- @param
- @result
+ @property pageCount
+ @result The number of pages in the PDF document.
+ */
+@property (nonatomic, assign, readonly) NSUInteger pageCount;
+
+
+/*!
+ @property CGPDFDocument
+ @result A CGPDFDocumentRef for this PDF.
+ */
+@property (nonatomic, assign, readonly) CGPDFDocumentRef CGPDFDocument;
+
+/*!
+ @method pdfDocumentWithFileAtPath:
+ @param path
+ @result A new CHPDFDocument instance.
  @discussion
- @updated
+ @updated 15-Feb-2011
  */
 + (CHPDFDocument*) pdfDocumentWithFileAtPath:(NSString*)path;
 
 
 /*!
- @method
- @param
- @result
+ @method pdfDocumentWithURL:
+ @param url
+ @result A new CHPDFDocument instance.
  @discussion
- @updated
+ @updated 15-Feb-2011
  */
 + (CHPDFDocument*) pdfDocumentWithURL:(NSURL*)url;
 
 /*!
- @method
- @param
- @result
+ @method initWithFileAtPath:
+ @param path
+ @result A new CHPDFDocument instance.
  @discussion
- @updated
+ @updated 15-Feb-2011
  */
 - (id) initWithFileAtPath:(NSString*)path;
 
 /*!
- @method
- @param
- @result
+ @method initWithURL:
+ @param url
+ @result A new CHPDFDocument instance.
  @discussion
- @updated
+ @updated 15-Feb-2011
  */
 - (id) initWithURL:(NSURL*)url;
 
 
 /*!
- @method
- @param
+ @method imageForPageAtIndex:inRect
+ @param pageIndex
+ @param pageRect
  @result
  @discussion
  Note: PDF pages start with an index of 1, NOT 0
- @updated
+ @updated 15-Feb-2011
  */
 - (UIImage*) imageForPageAtIndex:(NSUInteger)pageIndex inRect:(CGRect)pageRect;
 
 
 /*!
- @method
- @param
- @result
+ @method pageAtIndex:
+ @param pageIndex
+ @result A CGPDFPageRef for the requested page, or NULL if an invalid page was
+ requested. The caller is responsible for calling CFRelease on the returned
+ page reference.
  @discussion
 	Note: PDF pages start with an index of 1, NOT 0
- @updated
+ @updated 15-Feb-2011
  */
 - (CGPDFPageRef) pageAtIndex:(NSUInteger)pageIndex;
 
 
 /*!
- @method
- @param
- @result
+ @method rectForPage:withWidth
+ @param page
+ @param width
+ @result A CGRect containing the dimensions for the supplied PDF page within
+ the bounds provided by width.
  @discussion
- @updated
+ @updated 15-Feb-2011
  */
 - (CGRect) rectForPage:(CGPDFPageRef)page withWidth:(CGFloat)width;
 
 
 /*!
- @method
- @param
- @result
+ @method scaleForPage:withWidth
+ @param page
+ @param width
+ @result The scale factor for the supplied PDF page within the bounds provided
+ by width.
  @discussion
- @updated
+ @updated 15-Feb-2011
  */
 - (CGFloat) scaleForPage:(CGPDFPageRef)page withWidth:(CGFloat)width;
 

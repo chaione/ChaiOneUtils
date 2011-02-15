@@ -11,6 +11,9 @@
 #import <UIKit/UIApplication.h>
 
 
+/*!
+ @category UIApplication (CHAlerts)
+ */
 @interface UIApplication (CHAlerts)
 
 

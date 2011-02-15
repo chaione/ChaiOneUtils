@@ -10,6 +10,9 @@
 #import <UIKit/UIApplication.h>
 
 
+/*!
+ @category UIApplication (CHLogging)
+ */
 @interface UIApplication (CHLogging)
 
 /*!
