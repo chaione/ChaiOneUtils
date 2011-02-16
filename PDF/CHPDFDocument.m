@@ -82,6 +82,7 @@
 	
 	UIImage* thumbnail			= nil;
 	CGPDFPageRef page			= [self pageAtIndex:pageIndex];
+	CFRetain(page);
 	CGFloat pdfScale			= [self scaleForPage:page withWidth:pageRect.size.width];
 	
 	@try {
