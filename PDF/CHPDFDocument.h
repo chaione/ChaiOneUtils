@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-#define RELEASE_PDF(ref)		if(ref) { CFRelease(ref); ref = nil; }
-#define RELEASE_PAGE(ref)		if(ref) { CFRelease(ref); ref = nil; }
+#define RETAIN_PDF(ref)			CGPDFDocumentRetain(ref);
+#define RETAIN_PAGE(ref)		CGPDFPageRetain(ref);
+
+#define RELEASE_PDF(ref)		CGPDFDocumentRelease(ref); ref = NULL;
+#define RELEASE_PAGE(ref)		CGPDFPageRelease(ref); ref = NULL;
+
+extern const CGRect kCHDefaultPortraitPageRect;
+
 
 @class UIImage;
 
@@ -103,6 +109,30 @@
  @updated 15-Feb-2011
  */
 - (CGPDFPageRef) pageAtIndex:(NSUInteger)pageIndex;
+
+
+/*!
+ @method dataForPageAtIndex:
+ @param pageIndex
+ @result An NSData instance containing the raw PDF bytes for the requested page.
+ @discussion This method is typically used to make loading individual pages of
+ a PDF into a UIWebView.
+ @discussion
+ Note: PDF pages start with an index of 1, NOT 0
+ @updated 18-Feb-2011
+ */
+- (NSData*) dataForPageAtIndex:(NSUInteger)pageIndex;
+
+
+/*!
+ @method dataForPage:
+ @param page
+ @result An NSData instance containing the raw PDF bytes for the requested page.
+ @discussion This method is typically used to make loading individual pages of
+ a PDF into a UIWebView.
+ @updated 18-Feb-2011
+ */
+- (NSData*) dataForPage:(CGPDFPageRef)page;
 
 
 /*!
