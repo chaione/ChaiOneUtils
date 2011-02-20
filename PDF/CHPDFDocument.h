@@ -1,28 +1,36 @@
-//
-//  CHPDFDocument.h
-//  ChaiOneUtils
-//
-//  Created by Michael Gile on 2/15/11.
-//  Copyright 2011 ChaiOne Inc. All rights reserved.
-//
+/*
+ *  CHPDFDocument.h
+ *  ChaiOneUtils
+ *
+ *  Copyright (c) 2011 ChaiOne Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 
 #import <Foundation/Foundation.h>
-#import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CGPDFDocument.h>
 
 #define RETAIN_PDF(ref)			CGPDFDocumentRetain(ref);
-#define RETAIN_PAGE(ref)		CGPDFPageRetain(ref);
-
 #define RELEASE_PDF(ref)		CGPDFDocumentRelease(ref); ref = NULL;
-#define RELEASE_PAGE(ref)		CGPDFPageRelease(ref); ref = NULL;
-
-extern const CGRect kCHDefaultPortraitPageRect;
 
 
 @class UIImage;
+@class CHPDFPage;
 
 /*!
  @class CHPDFDocument
- @discussion A Cocoa wrapper for the PDF utilities provided by the QuartzCore
+ @discussion A Cocoa wrapper for the PDF utilities provided by the CoreGraphics
  framework.
  @updated 15-Feb-2011
  */
@@ -30,7 +38,6 @@ extern const CGRect kCHDefaultPortraitPageRect;
 @private
 	NSURL*					_pdfURL;
 	CGPDFDocumentRef		_pdfDocumentRef;
-	CGFloat					_pdfScale;
 	NSUInteger				_pageCount;
 }
 
@@ -46,7 +53,7 @@ extern const CGRect kCHDefaultPortraitPageRect;
  @property CGPDFDocument
  @result A CGPDFDocumentRef for this PDF.
  */
-@property (nonatomic, assign, readonly) CGPDFDocumentRef CGPDFDocument;
+@property (nonatomic, readonly) CGPDFDocumentRef CGPDFDocument;
 
 /*!
  @method pdfDocumentWithFileAtPath:
@@ -108,7 +115,7 @@ extern const CGRect kCHDefaultPortraitPageRect;
 	Note: PDF pages start with an index of 1, NOT 0
  @updated 15-Feb-2011
  */
-- (CGPDFPageRef) pageAtIndex:(NSUInteger)pageIndex;
+- (CHPDFPage*) pageAtIndex:(NSUInteger)pageIndex;
 
 
 /*!
@@ -123,39 +130,5 @@ extern const CGRect kCHDefaultPortraitPageRect;
  */
 - (NSData*) dataForPageAtIndex:(NSUInteger)pageIndex;
 
-
-/*!
- @method dataForPage:
- @param page
- @result An NSData instance containing the raw PDF bytes for the requested page.
- @discussion This method is typically used to make loading individual pages of
- a PDF into a UIWebView.
- @updated 18-Feb-2011
- */
-- (NSData*) dataForPage:(CGPDFPageRef)page;
-
-
-/*!
- @method rectForPage:withWidth
- @param page
- @param width
- @result A CGRect containing the dimensions for the supplied PDF page within
- the bounds provided by width.
- @discussion
- @updated 15-Feb-2011
- */
-- (CGRect) rectForPage:(CGPDFPageRef)page withWidth:(CGFloat)width;
-
-
-/*!
- @method scaleForPage:withWidth
- @param page
- @param width
- @result The scale factor for the supplied PDF page within the bounds provided
- by width.
- @discussion
- @updated 15-Feb-2011
- */
-- (CGFloat) scaleForPage:(CGPDFPageRef)page withWidth:(CGFloat)width;
 
 @end

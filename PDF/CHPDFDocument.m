@@ -1,24 +1,28 @@
-//
-//  CHPDFDocument.m
-//  ChaiOneUtils
-//
-//  Created by Michael Gile on 2/15/11.
-//  Copyright 2011 ChaiOne Inc. All rights reserved.
-//
+/*
+ *  CHPDFDocument.m
+ *  ChaiOneUtils
+ *
+ *  Copyright (c) 2011 ChaiOne Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 
 #import "CHPDFDocument.h"
-#import <UIKit/UIGraphics.h>
-#import <UIKit/UIImage.h>
+#import "CHPDFPage.h"
 #import "CHLogging.h"
 
-
-// An 8.5" x 11" page
-const CGRect kCHDefaultPortraitPageRect	= {
-	// Origin (x,y)
-	{ 0.0f, 0.0f },
-	// Size (w,h)
-	{ 612.0f, 792.0f }
-};
+#import <UIKit/UIImage.h>
 
 
 @interface CHPDFDocument (Private)
@@ -86,105 +90,18 @@ const CGRect kCHDefaultPortraitPageRect	= {
 
 - (UIImage*) imageForPageAtIndex:(NSUInteger)pageIndex 
 						  inRect:(CGRect)pageRect {
-
-	UIGraphicsBeginImageContext(pageRect.size);
-	
-	UIImage* thumbnail			= nil;
-	CGPDFPageRef page			= [self pageAtIndex:pageIndex];
-	RETAIN_PAGE(page)
-	CGFloat pdfScale			= [self scaleForPage:page withWidth:pageRect.size.width];
-	
-	@try {
-		CGContextRef context	= UIGraphicsGetCurrentContext();
-		
-		// First fill the background with white.
-		CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
-		CGContextFillRect(context, pageRect);
-		
-		CGContextSaveGState(context);
-		// Flip the context so that the PDF page is rendered
-		// right side up.
-		CGContextTranslateCTM(context, 0.0, pageRect.size.height);
-		CGContextScaleCTM(context, 1.0, -1.0);
-		
-		// Scale the context so that the PDF page is rendered 
-		// at the correct size for the zoom level.
-		CGContextScaleCTM(context, pdfScale, pdfScale);	
-		CGContextDrawPDFPage(context, page);
-		CGContextRestoreGState(context);
-		
-		thumbnail				= UIGraphicsGetImageFromCurrentImageContext();
-		
-		UIGraphicsEndImageContext();
-	}
-	@catch (NSException * e) {
-		CHEXCEPTION(e)
-	}
-	@finally {
-		RELEASE_PAGE(page)
-	}
-	
-	return thumbnail;
+	return [[self pageAtIndex:pageIndex] imageForRect:pageRect];
 }
 
-- (CGPDFPageRef) pageAtIndex:(NSUInteger)pageIndex {
-	CGPDFPageRef page		= CGPDFDocumentGetPage([self CGPDFDocument], pageIndex);
-	return page;
+- (CHPDFPage*) pageAtIndex:(NSUInteger)pageIndex {
+	CGPDFPageRef page = CGPDFDocumentGetPage([self CGPDFDocument], pageIndex);
+	
+	return [CHPDFPage pageWithCGPDFPage:page];
 }
 
-- (CGFloat) scaleForPage:(CGPDFPageRef)page withWidth:(CGFloat)width {
-	
-	if (NULL == page) {
-		return 0.0f;
-	}
-	
-	CGFloat scale			= 0.0f;
-	CGRect pageRect			= CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
-	scale					= width / pageRect.size.width;
-	pageRect.size			= CGSizeMake(pageRect.size.width * scale, pageRect.size.height * scale);
-	
-	return scale;
-}
-
-- (CGRect) rectForPage:(CGPDFPageRef)page withWidth:(CGFloat)width {
-	CGRect pageRect			= CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
-	CGFloat scale			= [self scaleForPage:page withWidth:width];
-	pageRect.size			= CGSizeMake(pageRect.size.width * scale, pageRect.size.height * scale);
-	
-	return pageRect;
-}
 
 - (NSData*) dataForPageAtIndex:(NSUInteger)pageIndex {
-	return [self dataForPage:[self pageAtIndex:pageIndex]];
-}
-
-- (NSData*) dataForPage:(CGPDFPageRef)page {
-	
-	NSMutableData* pdfData		= [[NSMutableData alloc] initWithLength:0];
-	CGRect pageRect				= kCHDefaultPortraitPageRect;
-	CGFloat pdfScale			= [self scaleForPage:page withWidth:pageRect.size.width];
-	
-	UIGraphicsBeginPDFContextToData(pdfData, pageRect, nil);
-	
-	CGContextRef context		= UIGraphicsGetCurrentContext();
-	
-	UIGraphicsBeginPDFPage();
-	
-	CGContextSaveGState(context);
-	// Flip the context so that the PDF page is rendered
-	// right side up.
-	CGContextTranslateCTM(context, 0.0, pageRect.size.height);
-	CGContextScaleCTM(context, 1.0, -1.0);
-	
-	// Scale the context so that the PDF page is rendered 
-	// at the correct size for the zoom level.
-	CGContextScaleCTM(context, pdfScale, pdfScale);	
-	CGContextDrawPDFPage(context, page);
-	CGContextRestoreGState(context);
-		
-	UIGraphicsEndPDFContext();
-	
-	return [pdfData autorelease];
+	return [[self pageAtIndex:pageIndex] data];
 }
 
 #pragma mark -

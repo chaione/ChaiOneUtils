@@ -17,6 +17,12 @@
 		293A1B98130AE96300E97454 /* CHPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1B96130AE96300E97454 /* CHPDFDocument.m */; };
 		293A1BA0130AF6A500E97454 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1B9F130AF6A500E97454 /* CoreGraphics.framework */; };
 		293A1BC3130AF6B400E97454 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1BC2130AF6B400E97454 /* QuartzCore.framework */; };
+		29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14CF131009E40095F0C7 /* CHPDFPage.h */; };
+		29DF14D2131009E40095F0C7 /* CHPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14D0131009E40095F0C7 /* CHPDFPage.m */; };
+		29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F113100D8B0095F0C7 /* NSStream+Host.h */; };
+		29DF14F413100D8B0095F0C7 /* NSStream+Host.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14F213100D8B0095F0C7 /* NSStream+Host.m */; };
+		29DF14F713100DC40095F0C7 /* NSObject-Dispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F513100DC40095F0C7 /* NSObject-Dispatch.h */; };
+		29DF14F813100DC40095F0C7 /* NSObject-Dispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14F613100DC40095F0C7 /* NSObject-Dispatch.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +38,12 @@
 		293A1B96130AE96300E97454 /* CHPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPDFDocument.m; sourceTree = "<group>"; };
 		293A1B9F130AF6A500E97454 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		293A1BC2130AF6B400E97454 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29DF14CF131009E40095F0C7 /* CHPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPDFPage.h; sourceTree = "<group>"; };
+		29DF14D0131009E40095F0C7 /* CHPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPDFPage.m; sourceTree = "<group>"; };
+		29DF14F113100D8B0095F0C7 /* NSStream+Host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+Host.h"; sourceTree = "<group>"; };
+		29DF14F213100D8B0095F0C7 /* NSStream+Host.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+Host.m"; sourceTree = "<group>"; };
+		29DF14F513100DC40095F0C7 /* NSObject-Dispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Dispatch.h"; sourceTree = "<group>"; };
+		29DF14F613100DC40095F0C7 /* NSObject-Dispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-Dispatch.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUtils_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libChaiOneUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +115,8 @@
 		293A196A1309643000E97454 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				29DF14E213100D560095F0C7 /* NSObject */,
+				29DF14E313100D5D0095F0C7 /* NSStream */,
 				293A19DD130966F600E97454 /* UIApplication */,
 			);
 			path = Categories;
@@ -124,8 +138,28 @@
 			children = (
 				293A1B95130AE96300E97454 /* CHPDFDocument.h */,
 				293A1B96130AE96300E97454 /* CHPDFDocument.m */,
+				29DF14CF131009E40095F0C7 /* CHPDFPage.h */,
+				29DF14D0131009E40095F0C7 /* CHPDFPage.m */,
 			);
 			path = PDF;
+			sourceTree = "<group>";
+		};
+		29DF14E213100D560095F0C7 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				29DF14F513100DC40095F0C7 /* NSObject-Dispatch.h */,
+				29DF14F613100DC40095F0C7 /* NSObject-Dispatch.m */,
+			);
+			name = NSObject;
+			sourceTree = "<group>";
+		};
+		29DF14E313100D5D0095F0C7 /* NSStream */ = {
+			isa = PBXGroup;
+			children = (
+				29DF14F113100D8B0095F0C7 /* NSStream+Host.h */,
+				29DF14F213100D8B0095F0C7 /* NSStream+Host.m */,
+			);
+			name = NSStream;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -148,6 +182,9 @@
 				293A196F1309643000E97454 /* UIApplication+Alerts.h in Headers */,
 				293A19711309643000E97454 /* UIApplication+Logging.h in Headers */,
 				293A1B97130AE96300E97454 /* CHPDFDocument.h in Headers */,
+				29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */,
+				29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */,
+				29DF14F713100DC40095F0C7 /* NSObject-Dispatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +241,9 @@
 				293A19701309643000E97454 /* UIApplication+Alerts.m in Sources */,
 				293A19721309643000E97454 /* UIApplication+Logging.m in Sources */,
 				293A1B98130AE96300E97454 /* CHPDFDocument.m in Sources */,
+				29DF14D2131009E40095F0C7 /* CHPDFPage.m in Sources */,
+				29DF14F413100D8B0095F0C7 /* NSStream+Host.m in Sources */,
+				29DF14F813100DC40095F0C7 /* NSObject-Dispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
