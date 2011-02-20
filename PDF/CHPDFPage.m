@@ -132,6 +132,31 @@ const CGRect kCHDefaultPortraitPageRect	= {
 	return [pdfData autorelease];
 }
 
+- (void) writeToFileAtPath:(NSString*)filePath {
+	CGRect pageRect				= kCHDefaultPortraitPageRect;
+	CGFloat pdfScale			= [self scaleForWidth:pageRect.size.width];
+	
+	UIGraphicsBeginPDFContextToFile(filePath, pageRect, nil);
+	
+	CGContextRef context		= UIGraphicsGetCurrentContext();
+	
+	UIGraphicsBeginPDFPage();
+	
+	CGContextSaveGState(context);
+	// Flip the context so that the PDF page is rendered
+	// right side up.
+	CGContextTranslateCTM(context, 0.0, pageRect.size.height);
+	CGContextScaleCTM(context, 1.0, -1.0);
+	
+	// Scale the context so that the PDF page is rendered 
+	// at the correct size for the zoom level.
+	CGContextScaleCTM(context, pdfScale, pdfScale);	
+	CGContextDrawPDFPage(context, [self CGPDFPage]);
+	CGContextRestoreGState(context);
+	
+	UIGraphicsEndPDFContext();
+}
+
 - (CGRect) rectForWidth:(CGFloat)width {
 	CGRect pageRect			= CGPDFPageGetBoxRect([self CGPDFPage], kCGPDFMediaBox);
 	CGFloat scale			= [self scaleForWidth:width];

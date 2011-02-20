@@ -84,6 +84,16 @@ extern const CGRect kCHDefaultPortraitPageRect;
 
 
 /*!
+ @method writeToFileAtPath:
+ @param filePath
+ @result Writes the data for this page to a file.
+ @discussion This method is typically used to make loading individual pages of
+ a PDF into a UIWebView.
+ @updated 20-Feb-2011
+ */
+- (void) writeToFileAtPath:(NSString*)filePath;
+
+/*!
  @method rectForWidth
  @param page
  @param width
