@@ -123,6 +123,10 @@ const CGRect kCHDefaultLandscapePageRect = {
 	
 	UIGraphicsBeginPDFPage();
 	
+	// First fill the background with white.
+	CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
+	CGContextFillRect(context, pageRect);
+	
 	CGContextSaveGState(context);
 	// Flip the context so that the PDF page is rendered
 	// right side up.
@@ -149,6 +153,10 @@ const CGRect kCHDefaultLandscapePageRect = {
 	CGContextRef context		= UIGraphicsGetCurrentContext();
 	
 	UIGraphicsBeginPDFPage();
+	
+	// First fill the background with white.
+	CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
+	CGContextFillRect(context, pageRect);
 	
 	CGContextSaveGState(context);
 	// Flip the context so that the PDF page is rendered
