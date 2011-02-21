@@ -30,6 +30,14 @@ const CGRect kCHDefaultPortraitPageRect	= {
 	{ 612.0f, 792.0f }
 };
 
+// An 11" x 8.5" page
+const CGRect kCHDefaultLandscapePageRect = {
+	// Origin (x,y)
+	{ 0.0f, 0.0f },
+	// Size (w,h)
+	{ 792.0f, 612.0f }
+};
+
 #pragma mark -
 @implementation CHPDFPage
 
@@ -106,7 +114,7 @@ const CGRect kCHDefaultPortraitPageRect	= {
 
 - (NSData*) data {
 	NSMutableData* pdfData		= [[NSMutableData alloc] initWithLength:0];
-	CGRect pageRect				= kCHDefaultPortraitPageRect;
+	CGRect pageRect				= CGPDFPageGetBoxRect([self CGPDFPage], kCGPDFMediaBox);
 	CGFloat pdfScale			= [self scaleForWidth:pageRect.size.width];
 	
 	UIGraphicsBeginPDFContextToData(pdfData, pageRect, nil);
@@ -133,7 +141,7 @@ const CGRect kCHDefaultPortraitPageRect	= {
 }
 
 - (void) writeToFileAtPath:(NSString*)filePath {
-	CGRect pageRect				= kCHDefaultPortraitPageRect;
+	CGRect pageRect				= CGPDFPageGetBoxRect([self CGPDFPage], kCGPDFMediaBox);
 	CGFloat pdfScale			= [self scaleForWidth:pageRect.size.width];
 	
 	UIGraphicsBeginPDFContextToFile(filePath, pageRect, nil);

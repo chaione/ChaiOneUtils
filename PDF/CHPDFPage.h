@@ -26,6 +26,7 @@
 #define RELEASE_PAGE(ref)		CGPDFPageRelease(ref); ref = NULL;
 
 extern const CGRect kCHDefaultPortraitPageRect;
+extern const CGRect kCHDefaultLandscapePageRect;
 
 @class UIImage;
 
