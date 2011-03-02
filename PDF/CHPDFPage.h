@@ -44,6 +44,78 @@ extern const CGRect kCHDefaultLandscapePageRect;
 @property (nonatomic, readonly) CGPDFPageRef CGPDFPage;
 
 /*!
+ @property pageNumber
+ @result
+ @discussion
+ @updated 02-Mar-2011
+ */
+@property (nonatomic, readonly) NSInteger pageNumber;
+
+
+/*!
+ @property isPortrait
+ @result YES if page dimensions are 612 x 792 (i.e. Portrait)
+ @discussion
+ @updated 02-Mar-2011
+ */
+@property (nonatomic, readonly, getter=isPortrait) BOOL portrait;
+
+
+/*!
+ @property isLandscape
+ @result YES if page dimensions are 792 x 612 (i.e. Landscape)
+ @discussion
+ @updated 02-Mar-2011
+ */
+@property (nonatomic, readonly, getter=isLandscape) BOOL landscape;
+
+
+/*!
+ @method mediaBoxRect
+ @result The CGRect for this PDF pages' Media Box (kCGPDFMediaBox).
+ @discussion
+ @updated 02-Mar-2011
+ */
+- (CGRect) mediaBoxRect;
+
+
+/*!
+ @method cropBoxRect
+ @result The CGRect for this PDF pages' Crop Box (kCGPDFCropBox).
+ @discussion
+ @updated 02-Mar-2011
+ */
+- (CGRect) cropBoxRect;
+
+
+/*!
+ @method trimBoxRect
+ @result The CGRect for this PDF pages' Trim Box (kCGPDFTrimBox).
+ @discussion
+ @updated 02-Mar-2011
+ */
+- (CGRect) trimBoxRect;
+
+
+/*!
+ @method artBoxRect
+ @result The CGRect for this PDF pages' Art Box (kCGPDFArtBox).
+ @discussion
+ @updated 02-Mar-2011
+ */
+- (CGRect) artBoxRect;
+
+
+/*!
+ @method bleedBoxRect
+ @result The CGRect for this PDF pages' Bleed Box (kCGPDFMBleedBox).
+ @discussion
+ @updated 02-Mar-2011
+ */
+- (CGRect) bleedBoxRect;
+
+
+/*!
  @method imageForRect
  @param rect
  @result
@@ -61,6 +133,7 @@ extern const CGRect kCHDefaultLandscapePageRect;
  @updated 15-Feb-2011
  */
 - (id) initWithCGPDFPage:(CGPDFPageRef)page;
+
 
 
 /*!
