@@ -108,9 +108,8 @@
 /*!
  @method pageAtIndex:
  @param pageIndex
- @result A CGPDFPageRef for the requested page, or NULL if an invalid page was
- requested. The caller is responsible for calling CFRelease on the returned
- page reference.
+ @result A CHPDFPage for the requested page, or nil if an invalid page was
+ requested.
  @discussion
 	Note: PDF pages start with an index of 1, NOT 0
  @updated 15-Feb-2011
