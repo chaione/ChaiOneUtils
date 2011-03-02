@@ -88,16 +88,12 @@ const CGRect kCHDefaultLandscapePageRect = {
 
 - (BOOL) isPortrait {
 	CGRect pageRect	= CGPDFPageGetBoxRect([self CGPDFPage], kCGPDFMediaBox);
-	CHDEBUG(@"pageRect = %@", NSStringFromCGRect(pageRect));
-	
 	return (pageRect.size.width < pageRect.size.height);
 }
 
 
 - (BOOL) isLandscape {
 	CGRect pageRect	= CGPDFPageGetBoxRect([self CGPDFPage], kCGPDFMediaBox);
-	CHDEBUG(@"pageRect = %@", NSStringFromCGRect(pageRect));
-	
 	return (pageRect.size.width > pageRect.size.height);
 }
 
