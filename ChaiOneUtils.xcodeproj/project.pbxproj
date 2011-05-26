@@ -25,6 +25,10 @@
 		29DF14F813100DC40095F0C7 /* NSObject-Dispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14F613100DC40095F0C7 /* NSObject-Dispatch.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B5AF4D1A138EBBE4005D5FC6 /* NSDate+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */; };
+		B5AF4D1B138EBBE4005D5FC6 /* NSDate+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */; };
+		B5AF4D3E138F1286005D5FC6 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D3C138F1286005D5FC6 /* UITableView+CHAdditions.h */; };
+		B5AF4D3F138F1286005D5FC6 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AF4D3D138F1286005D5FC6 /* UITableView+CHAdditions.m */; };
 		B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */; };
 		B5D6658F138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,10 @@
 		29DF14F613100DC40095F0C7 /* NSObject-Dispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-Dispatch.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUtils_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CHAdditions.h"; sourceTree = "<group>"; };
+		B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CHAdditions.m"; sourceTree = "<group>"; };
+		B5AF4D3C138F1286005D5FC6 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CHAdditions.h"; sourceTree = "<group>"; };
+		B5AF4D3D138F1286005D5FC6 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CHAdditions.m"; sourceTree = "<group>"; };
 		B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHFunctionalAdditions.h"; sourceTree = "<group>"; };
 		B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHFunctionalAdditions.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +127,8 @@
 		293A196A1309643000E97454 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B5AF4D3B138F1271005D5FC6 /* UITableView */,
+				B5AF4D17138EBBC1005D5FC6 /* NSDate */,
 				B5D66590138AB22A0000AD95 /* NSArray */,
 				29DF14E213100D560095F0C7 /* NSObject */,
 				29DF14E313100D5D0095F0C7 /* NSStream */,
@@ -175,6 +185,25 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		B5AF4D17138EBBC1005D5FC6 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */,
+				B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */,
+			);
+			name = NSDate;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B5AF4D3B138F1271005D5FC6 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF4D3C138F1286005D5FC6 /* UITableView+CHAdditions.h */,
+				B5AF4D3D138F1286005D5FC6 /* UITableView+CHAdditions.m */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
 		B5D66590138AB22A0000AD95 /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +229,8 @@
 				29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */,
 				29DF14F713100DC40095F0C7 /* NSObject-Dispatch.h in Headers */,
 				B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */,
+				B5AF4D1A138EBBE4005D5FC6 /* NSDate+CHAdditions.h in Headers */,
+				B5AF4D3E138F1286005D5FC6 /* UITableView+CHAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +291,8 @@
 				29DF14F413100D8B0095F0C7 /* NSStream+Host.m in Sources */,
 				29DF14F813100DC40095F0C7 /* NSObject-Dispatch.m in Sources */,
 				B5D6658F138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m in Sources */,
+				B5AF4D1B138EBBE4005D5FC6 /* NSDate+CHAdditions.m in Sources */,
+				B5AF4D3F138F1286005D5FC6 /* UITableView+CHAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
