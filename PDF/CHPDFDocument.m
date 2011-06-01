@@ -57,7 +57,7 @@
 }
 
 - (id) initWithFileAtPath:(NSString*)path {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_pdfURL		= [[NSURL fileURLWithPath:path] retain];
 	}
 	
@@ -66,7 +66,7 @@
 
 
 - (id) initWithURL:(NSURL*)url {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_pdfURL		= [url retain];
 	}
 	

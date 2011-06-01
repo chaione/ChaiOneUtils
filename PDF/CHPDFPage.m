@@ -66,7 +66,7 @@ const CGRect kCHDefaultLandscapePageRect = {
 }
 
 - (id) initWithCGPDFPage:(CGPDFPageRef)page {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		RETAIN_PAGE(page);
 		_pageRef = page;
 	}
