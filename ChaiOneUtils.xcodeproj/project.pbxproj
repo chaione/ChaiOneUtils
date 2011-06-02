@@ -263,10 +263,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ChaiOneUtils" */;
 			buildPhases = (
-				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
 				B5339F0C13968C49000AF245 /* ShellScript */,
+				D2AAC07A0554694100DB518D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -314,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf $BUILD_DIR/current\nln -s $BUILT_PRODUCTS_DIR $BUILD_DIR/current";
+			shellScript = "rm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -356,6 +356,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ChaiOneUtils;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -370,6 +371,7 @@
 				GCC_PREFIX_HEADER = ChaiOneUtils_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ChaiOneUtils;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
