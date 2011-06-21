@@ -34,7 +34,7 @@
 - (NSString *)commaSeparatedString {
     NSString *commaFormattedString = @"";
     for (NSString *s in self) {
-        commaFormattedString = [NSString stringWithFormat:@"%@%@",commaFormattedString,s];
+        commaFormattedString = [NSString stringWithFormat:@"%@,%@",commaFormattedString,s];
     }
     return commaFormattedString;
 }
