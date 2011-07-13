@@ -14,6 +14,7 @@
 - (NSArray *)ch_collect:(id (^)(id obj))block;
 - (NSArray *)ch_select:(BOOL (^)(id obj))block;
 - (NSString *)commaSeparatedString;
+- (NSString *)stringSeparatedByString:(NSString *)separator;
 
 
 @end

@@ -31,16 +31,20 @@
 	return subset;	
 }
 
-- (NSString *)commaSeparatedString {
-    NSString *commaFormattedString = @"";
+- (NSString *)stringSeparatedByString:(NSString *)separator {
+    NSString *separatedString = @"";
     for (NSString *s in self) {
-        if ([commaFormattedString isEqualToString:@""]) {
-            commaFormattedString = s;
+        if ([separatedString isEqualToString:@""]) {
+            separatedString = s;
         } else {
-            commaFormattedString = [NSString stringWithFormat:@"%@,%@",commaFormattedString,s];
+            separatedString = [NSString stringWithFormat:@"%@%@%@",separatedString,separator,s];
         }
     }
-    return commaFormattedString;
+    return separatedString;
+}
+
+- (NSString *)commaSeparatedString {
+    return [self stringSeparatedByString:@","];           
 }
 
 @end
