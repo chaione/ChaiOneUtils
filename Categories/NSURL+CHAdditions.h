@@ -11,5 +11,4 @@
 
 @interface NSURL (CHAdditions)
 
-
 @end
