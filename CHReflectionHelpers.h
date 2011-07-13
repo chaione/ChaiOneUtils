@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/objc.h>
+#import <objc/runtime.h>
 
+/* Returns YES if the property's type is an NSObject derivative.  Returns NO for scalar types. */
+BOOL ch_property_isObject(objc_property_t property);
 
-@interface CHReflectionHelpers : NSObject {
-    
-}
-
-@end
+/* Returns the Class instance that a property is defined with. */
+Class ch_property_getClass(objc_property_t property);
