@@ -10,16 +10,15 @@
 
 @interface NSString (CHAdditions)
 
--(BOOL)isBlank;
--(BOOL)contains:(NSString *)string;
--(NSArray *)splitOnChar:(char)ch;
--(NSString *)substringFrom:(NSInteger)from to:(NSInteger)to;
--(NSString *)stringByStrippingWhitespace;
-
--(int) indexOfString: (NSString *) str;
--(int) lastIndexOfString:(NSString *) str;
-
--(BOOL) equalsIgnoreCase:(NSString *) str;
+- (BOOL)isBlank;
+- (BOOL)contains:(NSString *)string;
+- (NSArray *)splitOnChar:(char)ch;
+- (NSString *)substringFrom:(NSInteger)from to:(NSInteger)to;
+- (NSString *)stringByStrippingWhitespace;
+- (int)indexOfString: (NSString *)str;
+- (int)lastIndexOfString:(NSString *)str;
+- (BOOL)equalsIgnoreCase:(NSString *)str;
+- (BOOL)startsWithString:(NSString *)prefix;
 
 @end
 
