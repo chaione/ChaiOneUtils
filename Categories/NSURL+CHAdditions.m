@@ -21,8 +21,10 @@
 - (NSArray *)parameters {
     NSString *urlString = [self description];
     NSArray *urlParts = [urlString componentsSeparatedByString:@"?"];
-    NSArray *params = [[urlParts objectAtIndex:1] splitOnChar:'&'];
-    return params;
+    if ([urlParts count] > 0) {
+        return [[urlParts objectAtIndex:1] splitOnChar:'&'];
+    }
+    return nil;
 }
 
 @end
