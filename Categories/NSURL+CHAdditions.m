@@ -12,20 +12,16 @@
 
 @implementation NSURL (CHAdditions)
 
-- (NSString *)baseURL {
+- (NSString *)baseURLString {
     NSString *urlString = [self description];
-    
     NSArray *urlParts = [urlString componentsSeparatedByString:@"?"];
     return [urlParts objectAtIndex:0];
 }
 
 - (NSArray *)parameters {
     NSString *urlString = [self description];
-    
     NSArray *urlParts = [urlString componentsSeparatedByString:@"?"];
-    
     NSArray *params = [[urlParts objectAtIndex:1] splitOnChar:'&'];
-    NSLog(@"params: %@",params);
     return params;
 }
 

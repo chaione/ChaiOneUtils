@@ -11,7 +11,7 @@
 
 @interface NSURL (CHAdditions)
 
-- (NSString *)baseURL;
+- (NSString *)baseURLString;
 - (NSArray *)parameters;
 
 @end
