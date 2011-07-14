@@ -11,6 +11,13 @@
 
 @implementation NSString (CHAdditions)
 
+- (NSString *)uriEscapedString
+{
+    NSString *result = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, CFSTR(":/?#[]@!$&’()*+,;="), kCFStringEncodingUTF8);
+    return [result autorelease];
+}
+
+
 -(BOOL)isBlank {
 	if([[self stringByStrippingWhitespace] length] == 0)
 		return YES;

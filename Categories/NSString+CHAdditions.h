@@ -19,6 +19,7 @@
 - (int)lastIndexOfString:(NSString *)str;
 - (BOOL)equalsIgnoreCase:(NSString *)str;
 - (BOOL)startsWithString:(NSString *)prefix;
+- (NSString *)uriEscapedString;
 
 @end
 
