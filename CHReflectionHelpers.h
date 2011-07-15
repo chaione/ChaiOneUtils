@@ -15,3 +15,6 @@ BOOL ch_property_isObject(objc_property_t property);
 
 /* Returns the Class instance that a property is defined with. */
 Class ch_property_getClass(objc_property_t property);
+
+/* Returns YES if the targetClass derives from superclass */
+BOOL ch_class_derivesFromClass(Class targetClass, Class superclass);

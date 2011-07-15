@@ -26,8 +26,29 @@ Class ch_property_getClass(objc_property_t property) {
     int firstQuoteIndex = [attributeString indexOfString:@"\""];
     int lastQuoteIndex = [attributeString lastIndexOfString:@"\""];
     NSString *className = [attributeString substringWithRange:NSMakeRange(firstQuoteIndex + 1, lastQuoteIndex - firstQuoteIndex - 1)];
-    NSLog(@"Parsed class name: %@", className);
    
-    Class cls = NSClassFromString(className);
+    Class cls =  [[NSBundle mainBundle] classNamed:className];
+    if (cls == nil) {
+        //try other bundles
+        cls = NSClassFromString(className);
+    }
+    
     return cls;
+}
+
+BOOL ch_class_derivesFromClass(Class targetClass, Class superclass) {
+    NSString *superclassName = NSStringFromClass(superclass);
+        
+    Class cls = targetClass;
+    while(true) {
+        NSString *className = NSStringFromClass(cls);
+        if ([className isEqualToString:superclassName]) {
+            return YES;
+        }
+        
+        cls = [cls superclass];
+        if (cls == NULL) {
+            return NO;
+        }
+    }
 }

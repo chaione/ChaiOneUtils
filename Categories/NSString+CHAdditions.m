@@ -96,7 +96,6 @@
 - (BOOL)startsWithString:(NSString *)prefix {
     NSInteger length = [prefix length];
     NSString *substring = [self substringToIndex:length];
-    NSLog(@"substring: %@", substring);
     return [substring isEqualToString:prefix];
 }
 
