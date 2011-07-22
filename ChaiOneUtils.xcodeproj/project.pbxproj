@@ -7,39 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		293A19631309622200E97454 /* CHLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A19621309622200E97454 /* CHLogging.h */; };
-		293A196F1309643000E97454 /* UIApplication+Alerts.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A196B1309643000E97454 /* UIApplication+Alerts.h */; };
+		293A19631309622200E97454 /* CHLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A19621309622200E97454 /* CHLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		293A196F1309643000E97454 /* UIApplication+Alerts.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A196B1309643000E97454 /* UIApplication+Alerts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293A19701309643000E97454 /* UIApplication+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A196C1309643000E97454 /* UIApplication+Alerts.m */; };
-		293A19711309643000E97454 /* UIApplication+Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A196D1309643000E97454 /* UIApplication+Logging.h */; };
+		293A19711309643000E97454 /* UIApplication+Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A196D1309643000E97454 /* UIApplication+Logging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293A19721309643000E97454 /* UIApplication+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A196E1309643000E97454 /* UIApplication+Logging.m */; };
 		293A197E130966C700E97454 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A197D130966C700E97454 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		293A1B97130AE96300E97454 /* CHPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1B95130AE96300E97454 /* CHPDFDocument.h */; };
+		293A1B97130AE96300E97454 /* CHPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1B95130AE96300E97454 /* CHPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293A1B98130AE96300E97454 /* CHPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1B96130AE96300E97454 /* CHPDFDocument.m */; };
 		293A1BA0130AF6A500E97454 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1B9F130AF6A500E97454 /* CoreGraphics.framework */; };
 		293A1BC3130AF6B400E97454 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1BC2130AF6B400E97454 /* QuartzCore.framework */; };
-		29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14CF131009E40095F0C7 /* CHPDFPage.h */; };
+		29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14CF131009E40095F0C7 /* CHPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF14D2131009E40095F0C7 /* CHPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14D0131009E40095F0C7 /* CHPDFPage.m */; };
-		29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F113100D8B0095F0C7 /* NSStream+Host.h */; };
+		29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F113100D8B0095F0C7 /* NSStream+Host.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF14F413100D8B0095F0C7 /* NSStream+Host.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14F213100D8B0095F0C7 /* NSStream+Host.m */; };
-		29DF14F713100DC40095F0C7 /* NSObject-Dispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F513100DC40095F0C7 /* NSObject-Dispatch.h */; };
+		29DF14F713100DC40095F0C7 /* NSObject-Dispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F513100DC40095F0C7 /* NSObject-Dispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF14F813100DC40095F0C7 /* NSObject-Dispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14F613100DC40095F0C7 /* NSObject-Dispatch.m */; };
-		8DA6CD9A13CE586B00960B4B /* NSURL+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA6CD9813CE586B00960B4B /* NSURL+CHAdditions.h */; };
+		8DA6CD9A13CE586B00960B4B /* NSURL+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA6CD9813CE586B00960B4B /* NSURL+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DA6CD9B13CE586B00960B4B /* NSURL+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6CD9913CE586B00960B4B /* NSURL+CHAdditions.m */; };
-		8DB6F4C9139027CB00916F0E /* NSString+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4C7139027CB00916F0E /* NSString+CHAdditions.h */; };
+		8DB6F4C9139027CB00916F0E /* NSString+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4C7139027CB00916F0E /* NSString+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DB6F4CA139027CB00916F0E /* NSString+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4C8139027CB00916F0E /* NSString+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		B52E4E65139552850049AF26 /* CHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B52E4E63139552850049AF26 /* CHPathHelpers.h */; };
+		B52E4E65139552850049AF26 /* CHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B52E4E63139552850049AF26 /* CHPathHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B52E4E66139552850049AF26 /* CHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B52E4E64139552850049AF26 /* CHPathHelpers.m */; };
-		B5346A0413CE366200F26FA9 /* CHReflectionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B5346A0213CE366200F26FA9 /* CHReflectionHelpers.h */; };
+		B5346A0413CE366200F26FA9 /* CHReflectionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B5346A0213CE366200F26FA9 /* CHReflectionHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5346A0513CE366200F26FA9 /* CHReflectionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A0313CE366200F26FA9 /* CHReflectionHelpers.m */; };
-		B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B5346A1013CE522A00F26FA9 /* NSData+CHBase64Encoding.h */; };
+		B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B5346A1013CE522A00F26FA9 /* NSData+CHBase64Encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5346A1313CE522A00F26FA9 /* NSData+CHBase64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A1113CE522A00F26FA9 /* NSData+CHBase64Encoding.m */; };
-		B5AF4D1A138EBBE4005D5FC6 /* NSDate+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */; };
+		B5AF4D1A138EBBE4005D5FC6 /* NSDate+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5AF4D1B138EBBE4005D5FC6 /* NSDate+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */; };
-		B5AF4D3E138F1286005D5FC6 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D3C138F1286005D5FC6 /* UITableView+CHAdditions.h */; };
+		B5AF4D3E138F1286005D5FC6 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D3C138F1286005D5FC6 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5AF4D3F138F1286005D5FC6 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AF4D3D138F1286005D5FC6 /* UITableView+CHAdditions.m */; };
-		B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */; };
+		B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D6658F138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */; };
 /* End PBXBuildFile section */
 
@@ -275,7 +275,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */,
 				293A19631309622200E97454 /* CHLogging.h in Headers */,
 				293A196F1309643000E97454 /* UIApplication+Alerts.h in Headers */,
 				293A19711309643000E97454 /* UIApplication+Logging.h in Headers */,
@@ -291,6 +290,7 @@
 				B5346A0413CE366200F26FA9 /* CHReflectionHelpers.h in Headers */,
 				B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */,
 				8DA6CD9A13CE586B00960B4B /* NSURL+CHAdditions.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +304,6 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
-				B5339F0C13968C49000AF245 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -342,22 +341,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B5339F0C13968C49000AF245 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Symlink build output to a common directory for easy referencing in other projects\nrm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"\n\n# Copy headers to a shared location as well\nmkdir -p \"$BUILD_DIR/current/headers\"\nfor file in `find . -name \"*.h\"`; do cp $file \"$BUILD_DIR/current/headers/\"; done;";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
@@ -429,6 +412,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = "-ObjC";
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -444,6 +428,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = "-ObjC";
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
