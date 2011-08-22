@@ -11,6 +11,8 @@
 
 @interface NSDate (CHAdditions)
 
+-(BOOL)isAfterDate:(NSDate *)anotherDate;
+-(BOOL)isBeforeDate:(NSDate *)anotherDate;
 + (NSDate *)dateWithDaysFromNow:(NSInteger)days;
 
 @end

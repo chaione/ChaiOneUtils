@@ -11,6 +11,14 @@
 
 @implementation NSDate (CHAdditions)
 
+-(BOOL)isAfterDate:(NSDate *)anotherDate {
+	return [self compare:anotherDate] == NSOrderedAscending;
+}
+
+-(BOOL)isBeforeDate:(NSDate *)anotherDate {
+	return [self compare:anotherDate] == NSOrderedDescending;
+}
+
 + (NSDate *)dateWithDaysFromNow:(NSInteger)days {
     const NSTimeInterval dayInterval = 60 * 60 * 24;
     return [NSDate dateWithTimeIntervalSinceNow:dayInterval * days];
