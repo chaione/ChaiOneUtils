@@ -24,3 +24,11 @@ NSString * DocumentsDirectory() {
     
     return docsDir;
 }
+
+NSURL *URLForFileInDocumentDirectory(NSString *filepath) {
+    return [DocumentsDirectoryURL() URLByAppendingPathComponent:filepath];
+}
+
+NSURL *DocumentsDirectoryURL() {
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
