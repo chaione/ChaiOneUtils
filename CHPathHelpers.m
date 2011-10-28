@@ -26,9 +26,9 @@ NSString * DocumentsDirectory() {
 }
 
 NSURL *URLForFileInDocumentDirectory(NSString *filepath) {
-    return [DocumentsDictionaryURL() URLByAppendingPathComponent:filepath];
+    return [DocumentsDirectoryURL() URLByAppendingPathComponent:filepath];
 }
 
-NSURL *DocumentsDictionaryURL() {
+NSURL *DocumentsDirectoryURL() {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }

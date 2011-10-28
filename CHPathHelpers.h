@@ -13,4 +13,4 @@ NSString *PathForFileInDocumentsDirectory(NSString *filepath);
 NSString *DocumentsDirectory();
 
 NSURL *URLForFileInDocumentDirectory(NSString *filepath);
-NSURL *DocumentsDictionaryURL();
+NSURL *DocumentsDirectoryURL();
