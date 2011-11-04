@@ -36,27 +36,11 @@ Class ch_property_getClass(objc_property_t property) {
 BOOL ch_class_derivesFromClass(Class targetClass, Class superclass) {
     NSString *superclassName = NSStringFromClass(superclass);
     Class cls = targetClass;
-    while (true) {
-        if ([NSStringFromClass(cls) isEqualToString:superclassName]) {
-            return YES;
-        }
-        
-        cls = [cls superclass];
-        if (cls == NULL) {
-            return NO;
-        }
-    }
-    
-    // After we have test case for this one, maybe we can change this to 
-    /*
     while (cls != NULL) {
-        if ([[NSStringFromClass(cls) isEqualToString:superclassName]) {
+        if ([NSStringFromClass(cls) isEqualToString:superclassName]) {
             return YES;
         }
         cls = [cls superclass];
     }
     return NO;
-     */
-    // Logic here is more clear, at the same time, we can reduce the NPath complexity, 
-    // Cyclomatic complexity, and NCSS.
 }

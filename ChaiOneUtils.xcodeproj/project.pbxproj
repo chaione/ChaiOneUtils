@@ -29,6 +29,8 @@
 		29BFCC001464717200C308C9 /* NSArrayCHAdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */; };
 		29BFCC031464776200C308C9 /* CHStringHelpersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCC021464776200C308C9 /* CHStringHelpersTest.m */; };
 		29BFCC04146477B700C308C9 /* CHStringHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBC61464335300C308C9 /* CHStringHelpers.m */; };
+		29BFCC0714647A5600C308C9 /* CHReflectionHelpersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCC0614647A5600C308C9 /* CHReflectionHelpersTest.m */; };
+		29BFCC0814647A7500C308C9 /* CHReflectionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A0313CE366200F26FA9 /* CHReflectionHelpers.m */; };
 		29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14CF131009E40095F0C7 /* CHPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF14D2131009E40095F0C7 /* CHPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14D0131009E40095F0C7 /* CHPDFPage.m */; };
 		29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F113100D8B0095F0C7 /* NSStream+Host.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,6 +79,8 @@
 		29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayCHAdditionsTest.m; sourceTree = "<group>"; };
 		29BFCC011464776100C308C9 /* CHStringHelpersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStringHelpersTest.h; sourceTree = "<group>"; };
 		29BFCC021464776200C308C9 /* CHStringHelpersTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStringHelpersTest.m; sourceTree = "<group>"; };
+		29BFCC0514647A5600C308C9 /* CHReflectionHelpersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHReflectionHelpersTest.h; sourceTree = "<group>"; };
+		29BFCC0614647A5600C308C9 /* CHReflectionHelpersTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHReflectionHelpersTest.m; sourceTree = "<group>"; };
 		29DF14CF131009E40095F0C7 /* CHPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPDFPage.h; sourceTree = "<group>"; };
 		29DF14D0131009E40095F0C7 /* CHPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPDFPage.m; sourceTree = "<group>"; };
 		29DF14F113100D8B0095F0C7 /* NSStream+Host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+Host.h"; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */,
 				29BFCC011464776100C308C9 /* CHStringHelpersTest.h */,
 				29BFCC021464776200C308C9 /* CHStringHelpersTest.m */,
+				29BFCC0514647A5600C308C9 /* CHReflectionHelpersTest.h */,
+				29BFCC0614647A5600C308C9 /* CHReflectionHelpersTest.m */,
 			);
 			path = ChaiONEUtilsTest;
 			sourceTree = "<group>";
@@ -445,11 +451,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BFCC0814647A7500C308C9 /* CHReflectionHelpers.m in Sources */,
 				29BFCC04146477B700C308C9 /* CHStringHelpers.m in Sources */,
 				29BFCBFF1464717200C308C9 /* NSArray+CHFunctionalAdditions.m in Sources */,
 				29BFCC001464717200C308C9 /* NSArrayCHAdditionsTest.m in Sources */,
 				29BFCBF614646B1E00C308C9 /* ChaiONEUtilsTest.m in Sources */,
 				29BFCC031464776200C308C9 /* CHStringHelpersTest.m in Sources */,
+				29BFCC0714647A5600C308C9 /* CHReflectionHelpersTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
