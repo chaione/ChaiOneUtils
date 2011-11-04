@@ -7,6 +7,8 @@
 //
 
 #import "NSString+CHAdditions.h"
+#import "CHStringHelpers.h"
+
 #define ellipsis @"‚Ä¶"
 
 @implementation NSString (CHAdditions)
@@ -100,11 +102,3 @@
 }
 
 @end
-
-NSString * EmptyIfNull(NSString * inputString) {
-	if (inputString == nil) {
-		return @"";
-	}
-	
-	return inputString;
-}

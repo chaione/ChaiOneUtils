@@ -11,10 +11,13 @@
 
 @interface NSArray (CHFunctionalAdditions)
 
-- (NSArray *)ch_collect:(id (^)(id obj))block;
-- (NSArray *)ch_select:(BOOL (^)(id obj))block;
+- (NSArray *)collect:(id (^)(id obj))block;
+- (NSArray *)map:(id (^)(id obj))block;
+- (NSArray *)select:(BOOL (^)(id obj))block;
 - (NSString *)commaSeparatedString;
 - (NSString *)stringSeparatedByString:(NSString *)separator;
 
+- (NSArray *)ch_collect:(id (^)(id obj))block __attribute__ ((deprecated));
+- (NSArray *)ch_select:(BOOL (^)(id obj))block __attribute__ ((deprecated));
 
 @end

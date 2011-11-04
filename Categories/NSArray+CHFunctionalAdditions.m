@@ -11,24 +11,33 @@
 @implementation NSArray (CHFunctionalAdditions)
 
 - (NSArray *)ch_collect:(id (^)(id obj))block {
-	NSMutableArray *projections = [NSMutableArray arrayWithCapacity:[self count]];
-	for (id obj in self) {
-		[projections addObject:block(obj)];
-	}
-	
-	return projections;	
+    return [self collect:block];
 }
 
 - (NSArray *)ch_select:(BOOL (^)(id obj))block {
-	
-	NSMutableArray *subset = [NSMutableArray arrayWithCapacity:[self count]];
-	for (id obj in self) {
-		if(block(obj)) {
-			[subset addObject:obj];
-		}
-	}
-	
-	return subset;	
+    return [self select:block];
+}
+
+- (NSArray *)collect:(id (^)(id obj))block {
+    return [self map:block];
+}
+
+- (NSArray *)map:(id (^)(id obj))block {
+    NSMutableArray *projections = [NSMutableArray arrayWithCapacity:[self count]];
+    for (id obj in self) {
+        [projections addObject:block(obj)];
+    }
+    return projections;	
+}
+
+- (NSArray *)select:(BOOL (^)(id obj))block {
+    NSMutableArray *subset = [NSMutableArray arrayWithCapacity:[self count]];
+    for (id obj in self) {
+        if(block(obj)) {
+            [subset addObject:obj];
+        }
+    }
+    return subset;	
 }
 
 - (NSString *)stringSeparatedByString:(NSString *)separator {

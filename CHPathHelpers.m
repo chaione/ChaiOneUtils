@@ -12,7 +12,7 @@ NSString *PathForFileInDocumentsDirectory(NSString *filepath) {
     return [DocumentsDirectory() stringByAppendingPathComponent:filepath];
 }
 
-NSString * DocumentsDirectory() {
+NSString *DocumentsDirectory() {
     NSString *docsDir = nil;
     NSArray *directories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     if ([directories count] > 0)

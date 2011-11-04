@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CHStringHelpers.h"
 
 @interface NSString (CHAdditions)
 
@@ -22,5 +23,3 @@
 - (NSString *)uriEscapedString;
 
 @end
-
-NSString * EmptyIfNull(NSString *);
