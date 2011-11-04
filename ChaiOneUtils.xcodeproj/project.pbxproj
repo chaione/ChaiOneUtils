@@ -19,6 +19,11 @@
 		293A1BC3130AF6B400E97454 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A1BC2130AF6B400E97454 /* QuartzCore.framework */; };
 		29BFCBC71464335300C308C9 /* CHStringHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BFCBC51464335300C308C9 /* CHStringHelpers.h */; };
 		29BFCBC81464335300C308C9 /* CHStringHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBC61464335300C308C9 /* CHStringHelpers.m */; };
+		29BFCBEB14646B1E00C308C9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BFCBEA14646B1E00C308C9 /* SenTestingKit.framework */; };
+		29BFCBEC14646B1E00C308C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A197D130966C700E97454 /* UIKit.framework */; };
+		29BFCBED14646B1E00C308C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		29BFCBF314646B1E00C308C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29BFCBF114646B1E00C308C9 /* InfoPlist.strings */; };
+		29BFCBF614646B1E00C308C9 /* ChaiONEUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBF514646B1E00C308C9 /* ChaiONEUtilsTest.m */; };
 		29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14CF131009E40095F0C7 /* CHPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF14D2131009E40095F0C7 /* CHPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14D0131009E40095F0C7 /* CHPDFPage.m */; };
 		29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F113100D8B0095F0C7 /* NSStream+Host.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +61,13 @@
 		293A1BC2130AF6B400E97454 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29BFCBC51464335300C308C9 /* CHStringHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStringHelpers.h; sourceTree = "<group>"; };
 		29BFCBC61464335300C308C9 /* CHStringHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStringHelpers.m; sourceTree = "<group>"; };
+		29BFCBE914646B1E00C308C9 /* ChaiONEUtilsTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaiONEUtilsTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BFCBEA14646B1E00C308C9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		29BFCBF014646B1E00C308C9 /* ChaiONEUtilsTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChaiONEUtilsTest-Info.plist"; sourceTree = "<group>"; };
+		29BFCBF214646B1E00C308C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29BFCBF414646B1E00C308C9 /* ChaiONEUtilsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChaiONEUtilsTest.h; sourceTree = "<group>"; };
+		29BFCBF514646B1E00C308C9 /* ChaiONEUtilsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChaiONEUtilsTest.m; sourceTree = "<group>"; };
+		29BFCBF714646B1E00C308C9 /* ChaiONEUtilsTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChaiONEUtilsTest-Prefix.pch"; sourceTree = "<group>"; };
 		29DF14CF131009E40095F0C7 /* CHPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPDFPage.h; sourceTree = "<group>"; };
 		29DF14D0131009E40095F0C7 /* CHPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPDFPage.m; sourceTree = "<group>"; };
 		29DF14F113100D8B0095F0C7 /* NSStream+Host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+Host.h"; sourceTree = "<group>"; };
@@ -82,6 +94,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29BFCBE514646B1E00C308C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29BFCBEB14646B1E00C308C9 /* SenTestingKit.framework in Frameworks */,
+				29BFCBEC14646B1E00C308C9 /* UIKit.framework in Frameworks */,
+				29BFCBED14646B1E00C308C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libChaiOneUtils.a */,
+				29BFCBE914646B1E00C308C9 /* ChaiONEUtilsTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +135,7 @@
 				293A19611309622200E97454 /* Logging */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
+				29BFCBEE14646B1E00C308C9 /* ChaiONEUtilsTest */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -125,6 +149,7 @@
 				293A197D130966C700E97454 /* UIKit.framework */,
 				293A1B9F130AF6A500E97454 /* CoreGraphics.framework */,
 				293A1BC2130AF6B400E97454 /* QuartzCore.framework */,
+				29BFCBEA14646B1E00C308C9 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +210,26 @@
 				29DF14D0131009E40095F0C7 /* CHPDFPage.m */,
 			);
 			path = PDF;
+			sourceTree = "<group>";
+		};
+		29BFCBEE14646B1E00C308C9 /* ChaiONEUtilsTest */ = {
+			isa = PBXGroup;
+			children = (
+				29BFCBF414646B1E00C308C9 /* ChaiONEUtilsTest.h */,
+				29BFCBF514646B1E00C308C9 /* ChaiONEUtilsTest.m */,
+				29BFCBEF14646B1E00C308C9 /* Supporting Files */,
+			);
+			path = ChaiONEUtilsTest;
+			sourceTree = "<group>";
+		};
+		29BFCBEF14646B1E00C308C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29BFCBF014646B1E00C308C9 /* ChaiONEUtilsTest-Info.plist */,
+				29BFCBF114646B1E00C308C9 /* InfoPlist.strings */,
+				29BFCBF714646B1E00C308C9 /* ChaiONEUtilsTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		29DF14E213100D560095F0C7 /* NSObject */ = {
@@ -288,6 +333,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		29BFCBE814646B1E00C308C9 /* ChaiONEUtilsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29BFCBF814646B1E00C308C9 /* Build configuration list for PBXNativeTarget "ChaiONEUtilsTest" */;
+			buildPhases = (
+				29BFCBE414646B1E00C308C9 /* Sources */,
+				29BFCBE514646B1E00C308C9 /* Frameworks */,
+				29BFCBE614646B1E00C308C9 /* Resources */,
+				29BFCBE714646B1E00C308C9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChaiONEUtilsTest;
+			productName = ChaiONEUtilsTest;
+			productReference = 29BFCBE914646B1E00C308C9 /* ChaiONEUtilsTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D2AAC07D0554694100DB518D /* ChaiOneUtils */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ChaiOneUtils" */;
@@ -322,6 +385,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* ChaiOneUtils */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -329,11 +393,47 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* ChaiOneUtils */,
+				29BFCBE814646B1E00C308C9 /* ChaiONEUtilsTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		29BFCBE614646B1E00C308C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29BFCBF314646B1E00C308C9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29BFCBE714646B1E00C308C9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		29BFCBE414646B1E00C308C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29BFCBF614646B1E00C308C9 /* ChaiONEUtilsTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +456,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29BFCBF114646B1E00C308C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29BFCBF214646B1E00C308C9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -424,6 +535,51 @@
 			};
 			name = Release;
 		};
+		29BFCBF914646B1E00C308C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChaiONEUtilsTest/ChaiONEUtilsTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "ChaiONEUtilsTest/ChaiONEUtilsTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		29BFCBFA14646B1E00C308C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChaiONEUtilsTest/ChaiONEUtilsTest-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "ChaiONEUtilsTest/ChaiONEUtilsTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +600,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		29BFCBF814646B1E00C308C9 /* Build configuration list for PBXNativeTarget "ChaiONEUtilsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29BFCBF914646B1E00C308C9 /* Debug */,
+				29BFCBFA14646B1E00C308C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
