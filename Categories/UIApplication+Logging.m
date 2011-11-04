@@ -37,9 +37,7 @@
 + (NSString*) pathForConsoleLog:(NSString*)filename {
 	NSArray* paths					= NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString* documentsDirectory	= [paths objectAtIndex:0];
-	NSString* logPath				= [documentsDirectory stringByAppendingPathComponent:filename];
-	
-	return logPath;
+	return [documentsDirectory stringByAppendingPathComponent:filename];
 }
 
 + (void) removeConsoleLogFile:(NSString*)filename {

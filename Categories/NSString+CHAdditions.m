@@ -21,9 +21,7 @@
 
 
 -(BOOL)isBlank {
-	if([[self stringByStrippingWhitespace] length] == 0)
-		return YES;
-	return NO;
+    return [[self stringByStrippingWhitespace] length] == 0;
 }
 
 -(BOOL)contains:(NSString *)string {
@@ -88,11 +86,7 @@
 }
 
 -(BOOL) equalsIgnoreCase:(NSString *) str {
-	if( [self caseInsensitiveCompare:str] == NSOrderedSame ) {
-		return YES;
-	} else {
-		return NO;
-	}
+    return [self caseInsensitiveCompare:str] == NSOrderedSame;
 }
 
 - (BOOL)startsWithString:(NSString *)prefix {
