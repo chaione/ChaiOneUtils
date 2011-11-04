@@ -24,6 +24,10 @@
 		29BFCBED14646B1E00C308C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		29BFCBF314646B1E00C308C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29BFCBF114646B1E00C308C9 /* InfoPlist.strings */; };
 		29BFCBF614646B1E00C308C9 /* ChaiONEUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBF514646B1E00C308C9 /* ChaiONEUtilsTest.m */; };
+		29BFCBFD1464702200C308C9 /* NSArrayCHAdditionsTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BFCBFB1464702200C308C9 /* NSArrayCHAdditionsTest.h */; };
+		29BFCBFE1464702200C308C9 /* NSArrayCHAdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */; };
+		29BFCBFF1464717200C308C9 /* NSArray+CHFunctionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */; };
+		29BFCC001464717200C308C9 /* NSArrayCHAdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */; };
 		29DF14D1131009E40095F0C7 /* CHPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14CF131009E40095F0C7 /* CHPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF14D2131009E40095F0C7 /* CHPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF14D0131009E40095F0C7 /* CHPDFPage.m */; };
 		29DF14F313100D8B0095F0C7 /* NSStream+Host.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF14F113100D8B0095F0C7 /* NSStream+Host.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +72,8 @@
 		29BFCBF414646B1E00C308C9 /* ChaiONEUtilsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChaiONEUtilsTest.h; sourceTree = "<group>"; };
 		29BFCBF514646B1E00C308C9 /* ChaiONEUtilsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChaiONEUtilsTest.m; sourceTree = "<group>"; };
 		29BFCBF714646B1E00C308C9 /* ChaiONEUtilsTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChaiONEUtilsTest-Prefix.pch"; sourceTree = "<group>"; };
+		29BFCBFB1464702200C308C9 /* NSArrayCHAdditionsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayCHAdditionsTest.h; sourceTree = "<group>"; };
+		29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayCHAdditionsTest.m; sourceTree = "<group>"; };
 		29DF14CF131009E40095F0C7 /* CHPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPDFPage.h; sourceTree = "<group>"; };
 		29DF14D0131009E40095F0C7 /* CHPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPDFPage.m; sourceTree = "<group>"; };
 		29DF14F113100D8B0095F0C7 /* NSStream+Host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+Host.h"; sourceTree = "<group>"; };
@@ -215,9 +221,11 @@
 		29BFCBEE14646B1E00C308C9 /* ChaiONEUtilsTest */ = {
 			isa = PBXGroup;
 			children = (
+				29BFCBEF14646B1E00C308C9 /* Supporting Files */,
 				29BFCBF414646B1E00C308C9 /* ChaiONEUtilsTest.h */,
 				29BFCBF514646B1E00C308C9 /* ChaiONEUtilsTest.m */,
-				29BFCBEF14646B1E00C308C9 /* Supporting Files */,
+				29BFCBFB1464702200C308C9 /* NSArrayCHAdditionsTest.h */,
+				29BFCBFC1464702200C308C9 /* NSArrayCHAdditionsTest.m */,
 			);
 			path = ChaiONEUtilsTest;
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 				AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */,
 				B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */,
 				29BFCBC71464335300C308C9 /* CHStringHelpers.h in Headers */,
+				29BFCBFD1464702200C308C9 /* NSArrayCHAdditionsTest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +384,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "ChaiONE Inc";
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ChaiOneUtils" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -430,6 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BFCBFF1464717200C308C9 /* NSArray+CHFunctionalAdditions.m in Sources */,
+				29BFCC001464717200C308C9 /* NSArrayCHAdditionsTest.m in Sources */,
 				29BFCBF614646B1E00C308C9 /* ChaiONEUtilsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +464,7 @@
 				B5346A1313CE522A00F26FA9 /* NSData+CHBase64Encoding.m in Sources */,
 				B5B450A214560C1900410264 /* NSURL+CHAdditions.m in Sources */,
 				29BFCBC81464335300C308C9 /* CHStringHelpers.m in Sources */,
+				29BFCBFE1464702200C308C9 /* NSArrayCHAdditionsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
