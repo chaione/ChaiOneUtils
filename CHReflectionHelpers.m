@@ -9,46 +9,38 @@
 #import "CHReflectionHelpers.h"
 #import "NSString+CHAdditions.h"
 
+NSString* propertyAttributeString(objc_property_t property) {
+    return [NSString stringWithCString:property_getAttributes(property) 
+                              encoding:NSUTF8StringEncoding];
+}
+
 BOOL ch_property_isObject(objc_property_t property) {
-    const char * attributeCString = property_getAttributes(property);
-    NSString *attributeString = [NSString stringWithCString:attributeCString encoding:NSUTF8StringEncoding];
-    
     //The attribute string starts with 'T@' if it's a pointer to an id (object)
-    BOOL isObject = [attributeString startsWithString:@"T@"];
-    return isObject;
+    return [propertyAttributeString(property) startsWithString:@"T@"];
 }
 
 Class ch_property_getClass(objc_property_t property) {
-    const char * attributeCString = property_getAttributes(property);
-    NSString *attributeString = [NSString stringWithCString:attributeCString encoding:NSUTF8StringEncoding];
+    NSString *attributeString = propertyAttributeString(property);
     
     //The class name is enclosed in quotes
     int firstQuoteIndex = [attributeString indexOfString:@"\""];
     int lastQuoteIndex = [attributeString lastIndexOfString:@"\""];
-    NSString *className = [attributeString substringWithRange:NSMakeRange(firstQuoteIndex + 1, lastQuoteIndex - firstQuoteIndex - 1)];
+    NSString *className = [attributeString substringWithRange:NSMakeRange(
+                              firstQuoteIndex + 1, 
+                              lastQuoteIndex - firstQuoteIndex - 1)];
    
     Class cls =  [[NSBundle mainBundle] classNamed:className];
-    if (cls == nil) {
-        //try other bundles
-        cls = NSClassFromString(className);
-    }
-    
-    return cls;
+    return cls == nil ? NSClassFromString(className) : cls;
 }
 
 BOOL ch_class_derivesFromClass(Class targetClass, Class superclass) {
     NSString *superclassName = NSStringFromClass(superclass);
-        
     Class cls = targetClass;
-    while(true) {
-        NSString *className = NSStringFromClass(cls);
-        if ([className isEqualToString:superclassName]) {
+    while (cls != NULL) {
+        if ([NSStringFromClass(cls) isEqualToString:superclassName]) {
             return YES;
         }
-        
         cls = [cls superclass];
-        if (cls == NULL) {
-            return NO;
-        }
     }
+    return NO;
 }

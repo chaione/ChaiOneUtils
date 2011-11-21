@@ -10,6 +10,8 @@
 #import <objc/objc.h>
 #import <objc/runtime.h>
 
+NSString* propertyAttributeString(objc_property_t property);
+
 /* Returns YES if the property's type is an NSObject derivative.  Returns NO for scalar types. */
 BOOL ch_property_isObject(objc_property_t property);
 
