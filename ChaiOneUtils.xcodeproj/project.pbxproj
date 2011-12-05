@@ -33,6 +33,8 @@
 		B5346A0513CE366200F26FA9 /* CHReflectionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A0313CE366200F26FA9 /* CHReflectionHelpers.m */; };
 		B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B5346A1013CE522A00F26FA9 /* NSData+CHBase64Encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5346A1313CE522A00F26FA9 /* NSData+CHBase64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A1113CE522A00F26FA9 /* NSData+CHBase64Encoding.m */; };
+		B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B535EFCA148D54970072E3E3 /* NSArray+CHAdditions.h */; };
+		B535EFCD148D54970072E3E3 /* NSArray+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B535EFCB148D54970072E3E3 /* NSArray+CHAdditions.m */; };
 		B5AF4D1A138EBBE4005D5FC6 /* NSDate+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5AF4D1B138EBBE4005D5FC6 /* NSDate+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */; };
 		B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B4509F14560C1900410264 /* NSURL+CHAdditions.h */; };
@@ -68,6 +70,8 @@
 		B5346A0313CE366200F26FA9 /* CHReflectionHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHReflectionHelpers.m; sourceTree = "<group>"; };
 		B5346A1013CE522A00F26FA9 /* NSData+CHBase64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CHBase64Encoding.h"; sourceTree = "<group>"; };
 		B5346A1113CE522A00F26FA9 /* NSData+CHBase64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CHBase64Encoding.m"; sourceTree = "<group>"; };
+		B535EFCA148D54970072E3E3 /* NSArray+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHAdditions.h"; sourceTree = "<group>"; };
+		B535EFCB148D54970072E3E3 /* NSArray+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHAdditions.m"; sourceTree = "<group>"; };
 		B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CHAdditions.h"; sourceTree = "<group>"; };
 		B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CHAdditions.m"; sourceTree = "<group>"; };
 		B5B4509F14560C1900410264 /* NSURL+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CHAdditions.h"; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 			children = (
 				B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */,
 				B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */,
+				B535EFCA148D54970072E3E3 /* NSArray+CHAdditions.h */,
+				B535EFCB148D54970072E3E3 /* NSArray+CHAdditions.m */,
 			);
 			name = NSArray;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */,
 				B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */,
+				B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +351,7 @@
 				B5346A0513CE366200F26FA9 /* CHReflectionHelpers.m in Sources */,
 				B5346A1313CE522A00F26FA9 /* NSData+CHBase64Encoding.m in Sources */,
 				B5B450A214560C1900410264 /* NSURL+CHAdditions.m in Sources */,
+				B535EFCD148D54970072E3E3 /* NSArray+CHAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
