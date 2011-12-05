@@ -13,5 +13,6 @@
 
 - (NSString *)baseURLString;
 - (NSArray *)parameters;
+- (NSDictionary *)paramDictionary;
 
 @end

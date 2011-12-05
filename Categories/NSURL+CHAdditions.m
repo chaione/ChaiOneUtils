@@ -27,4 +27,17 @@
     return nil;
 }
 
+- (NSDictionary *)paramDictionary {
+    NSString *urlString = [self absoluteString];
+    NSString *parameterString = [[urlString splitOnChar:'?'] objectAtIndex:1];
+    NSArray *paramArray = [parameterString splitOnChar:'&'];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    for (NSString *paramPair in paramArray) {
+        NSArray *pairParts = [paramPair splitOnChar:'='];
+        [params setValue:[pairParts objectAtIndex:1] forKey:[pairParts objectAtIndex:0]];
+    }
+    return params;
+}
+    
+
 @end
