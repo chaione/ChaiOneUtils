@@ -19,7 +19,7 @@
 }
 
 - (NSArray *)parameters {
-    NSString *urlString = [self description];
+    NSString *urlString = [self absoluteString];
     NSArray *urlParts = [urlString componentsSeparatedByString:@"?"];
     if ([urlParts count] > 0) {
         return [[urlParts objectAtIndex:1] splitOnChar:'&'];
@@ -28,9 +28,7 @@
 }
 
 - (NSDictionary *)paramDictionary {
-    NSString *urlString = [self absoluteString];
-    NSString *parameterString = [[urlString splitOnChar:'?'] objectAtIndex:1];
-    NSArray *paramArray = [parameterString splitOnChar:'&'];
+    NSArray *paramArray = [self parameters];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     for (NSString *paramPair in paramArray) {
         NSArray *pairParts = [paramPair splitOnChar:'='];
