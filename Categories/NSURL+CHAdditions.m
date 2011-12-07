@@ -21,7 +21,7 @@
 - (NSArray *)parameters {
     NSString *urlString = [self absoluteString];
     NSArray *urlParts = [urlString componentsSeparatedByString:@"?"];
-    if ([urlParts count] > 0) {
+    if ([urlParts count] > 1) {
         return [[urlParts objectAtIndex:1] splitOnChar:'&'];
     }
     return nil;
