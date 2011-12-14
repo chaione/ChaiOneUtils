@@ -41,6 +41,7 @@
 		B5B450A214560C1900410264 /* NSURL+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B450A014560C1900410264 /* NSURL+CHAdditions.m */; };
 		B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D6658F138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */; };
+		B5EB6E6C1499336000316366 /* CHMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EB6E6B1499336000316366 /* CHMath.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		B5B450A014560C1900410264 /* NSURL+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CHAdditions.m"; sourceTree = "<group>"; };
 		B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHFunctionalAdditions.h"; sourceTree = "<group>"; };
 		B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHFunctionalAdditions.m"; sourceTree = "<group>"; };
+		B5EB6E6B1499336000316366 /* CHMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMath.h; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,7 +111,7 @@
 			children = (
 				293A1B92130AE92900E97454 /* PDF */,
 				293A196A1309643000E97454 /* Categories */,
-				293A19611309622200E97454 /* Logging */,
+				293A19611309622200E97454 /* Macros */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -140,11 +142,13 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		293A19611309622200E97454 /* Logging */ = {
+		293A19611309622200E97454 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
 				293A19621309622200E97454 /* CHLogging.h */,
+				B5EB6E6B1499336000316366 /* CHMath.h */,
 			);
+			name = Macros;
 			path = Logging;
 			sourceTree = "<group>";
 		};
@@ -282,6 +286,7 @@
 				AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */,
 				B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */,
 				B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */,
+				B5EB6E6C1499336000316366 /* CHMath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

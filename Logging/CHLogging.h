@@ -18,13 +18,29 @@
  *
  */
 
-
 /*!
  @define CHVERBOSE
  @discussion Enable or disable extra logging output.
  */
-#define CHVERBOSE				1
+//#define CHVERBOSE				1
 //#undef CHVERBOSE
+
+#ifdef CHVERBOSE
+    /*!
+     @define CHLOG
+     @discussion Logs the message along with the line # and method name it came from
+     */
+    #define CHLOG(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+    
+    /*!
+     @define CHLOGCALL
+     @discussion Logs the class and method name.  Takes no arguments.  Does not include a trailing semicolon, so that must be added when used.
+     */
+    #define CHLOGCALL NSLog(@"[%@ %@]", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
+#else
+    #define CHLOG(...) /* */
+    #define CHLOGCALL /* */
+#endif
 
 #define CONCATSPACE(s1, s2)		s1 s2
 
@@ -33,7 +49,6 @@
  @discussion Trace Macro
  */
 #define CHTRACE(...) NSLog(__VA_ARGS__);
-
 
 /*
  @define CHTRACE_ENTRY
