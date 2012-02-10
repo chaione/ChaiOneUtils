@@ -41,6 +41,8 @@
 		B5B450A214560C1900410264 /* NSURL+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B450A014560C1900410264 /* NSURL+CHAdditions.m */; };
 		B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D6658F138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */; };
+		B5E7683714E5D10D00D925A5 /* CHDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E7683514E5D10D00D925A5 /* CHDiskCache.h */; };
+		B5E7683814E5D10D00D925A5 /* CHDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E7683614E5D10D00D925A5 /* CHDiskCache.m */; };
 		B5EB6E6C1499336000316366 /* CHMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EB6E6B1499336000316366 /* CHMath.h */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		B5B450A014560C1900410264 /* NSURL+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CHAdditions.m"; sourceTree = "<group>"; };
 		B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHFunctionalAdditions.h"; sourceTree = "<group>"; };
 		B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHFunctionalAdditions.m"; sourceTree = "<group>"; };
+		B5E7683514E5D10D00D925A5 /* CHDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDiskCache.h; sourceTree = "<group>"; };
+		B5E7683614E5D10D00D925A5 /* CHDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDiskCache.m; sourceTree = "<group>"; };
 		B5EB6E6B1499336000316366 /* CHMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMath.h; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +138,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B5E7683514E5D10D00D925A5 /* CHDiskCache.h */,
+				B5E7683614E5D10D00D925A5 /* CHDiskCache.m */,
 				B52E4E63139552850049AF26 /* CHPathHelpers.h */,
 				B52E4E64139552850049AF26 /* CHPathHelpers.m */,
 				B5346A0213CE366200F26FA9 /* CHReflectionHelpers.h */,
@@ -287,6 +293,7 @@
 				B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */,
 				B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */,
 				B5EB6E6C1499336000316366 /* CHMath.h in Headers */,
+				B5E7683714E5D10D00D925A5 /* CHDiskCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +364,7 @@
 				B5346A1313CE522A00F26FA9 /* NSData+CHBase64Encoding.m in Sources */,
 				B5B450A214560C1900410264 /* NSURL+CHAdditions.m in Sources */,
 				B535EFCD148D54970072E3E3 /* NSArray+CHAdditions.m in Sources */,
+				B5E7683814E5D10D00D925A5 /* CHDiskCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

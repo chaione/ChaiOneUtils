@@ -12,6 +12,15 @@ NSString *PathForFileInDocumentsDirectory(NSString *filepath) {
     return [DocumentsDirectory() stringByAppendingPathComponent:filepath];
 }
 
+NSString * CachesDirectory() {
+    NSArray *dirs = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    if ([dirs count] > 0) {
+        return [dirs objectAtIndex:0];
+    }
+    
+    return nil;
+}
+
 NSString * DocumentsDirectory() {
     NSString *docsDir = nil;
     NSArray *directories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
