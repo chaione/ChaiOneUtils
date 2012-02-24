@@ -33,17 +33,17 @@
 		B5346A0513CE366200F26FA9 /* CHReflectionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A0313CE366200F26FA9 /* CHReflectionHelpers.m */; };
 		B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B5346A1013CE522A00F26FA9 /* NSData+CHBase64Encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5346A1313CE522A00F26FA9 /* NSData+CHBase64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B5346A1113CE522A00F26FA9 /* NSData+CHBase64Encoding.m */; };
-		B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B535EFCA148D54970072E3E3 /* NSArray+CHAdditions.h */; };
+		B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B535EFCA148D54970072E3E3 /* NSArray+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B535EFCD148D54970072E3E3 /* NSArray+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B535EFCB148D54970072E3E3 /* NSArray+CHAdditions.m */; };
 		B5AF4D1A138EBBE4005D5FC6 /* NSDate+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AF4D18138EBBE4005D5FC6 /* NSDate+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5AF4D1B138EBBE4005D5FC6 /* NSDate+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AF4D19138EBBE4005D5FC6 /* NSDate+CHAdditions.m */; };
-		B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B4509F14560C1900410264 /* NSURL+CHAdditions.h */; };
+		B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B4509F14560C1900410264 /* NSURL+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5B450A214560C1900410264 /* NSURL+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B450A014560C1900410264 /* NSURL+CHAdditions.m */; };
 		B5D6658E138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6658C138AB2220000AD95 /* NSArray+CHFunctionalAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D6658F138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6658D138AB2220000AD95 /* NSArray+CHFunctionalAdditions.m */; };
-		B5E7683714E5D10D00D925A5 /* CHDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E7683514E5D10D00D925A5 /* CHDiskCache.h */; };
+		B5E7683714E5D10D00D925A5 /* CHDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E7683514E5D10D00D925A5 /* CHDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5E7683814E5D10D00D925A5 /* CHDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E7683614E5D10D00D925A5 /* CHDiskCache.m */; };
-		B5EB6E6C1499336000316366 /* CHMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EB6E6B1499336000316366 /* CHMath.h */; };
+		B5EB6E6C1499336000316366 /* CHMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EB6E6B1499336000316366 /* CHMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +276,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */,
+				B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */,
+				B5EB6E6C1499336000316366 /* CHMath.h in Headers */,
+				B5E7683714E5D10D00D925A5 /* CHDiskCache.h in Headers */,
 				293A19631309622200E97454 /* CHLogging.h in Headers */,
 				293A196F1309643000E97454 /* UIApplication+Alerts.h in Headers */,
 				293A19711309643000E97454 /* UIApplication+Logging.h in Headers */,
@@ -290,10 +294,6 @@
 				B5346A0413CE366200F26FA9 /* CHReflectionHelpers.h in Headers */,
 				B5346A1213CE522A00F26FA9 /* NSData+CHBase64Encoding.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUtils_Prefix.pch in Headers */,
-				B5B450A114560C1900410264 /* NSURL+CHAdditions.h in Headers */,
-				B535EFCC148D54970072E3E3 /* NSArray+CHAdditions.h in Headers */,
-				B5EB6E6C1499336000316366 /* CHMath.h in Headers */,
-				B5E7683714E5D10D00D925A5 /* CHDiskCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
