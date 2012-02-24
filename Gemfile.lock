@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    cocoapods (0.5.1)
+      xcodeproj (~> 0.1.0)
+    state_machine (1.1.2)
+    xcodebuild-rb (0.2.0)
+      state_machine (~> 1.1.2)
+    xcodeproj (0.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cocoapods
+  xcodebuild-rb
